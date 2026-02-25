@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Classic Mattress | Premium Comfort & Better Sleep</title>
+
+    <meta name="description"
+        content="Classic Mattress offers premium quality mattresses designed for superior comfort, orthopedic support, and restful sleep. Experience luxury sleep solutions crafted for every lifestyle.">
+
+    <meta name="keywords"
+        content="Classic Mattress, premium mattress, orthopedic mattress, memory foam mattress, luxury mattress, pocket spring mattress, sleep comfort, mattress brand, bedroom comfort">
+
+    <meta property="og:title" content="Classic Mattress | Comfort Redefined for Better Sleep">
+
+    <meta property="og:description"
+        content="Discover Classic Mattress – expertly crafted mattresses with advanced support technology for healthier, deeper, and more comfortable sleep every night.">
+
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="absolute left-0 w-100 right-0 top-0 z-50 bg-white/10 backdrop-blur py-2">
+        <div class="max-w-7xl px-4 mx-auto">
+            <div class="flex items-center justify-between py-2">
+
+                <!-- Logo -->
+                <a href="#"><img src="assets/images/logo/logo-white.png" class="lg:h-12 h-10" alt=""></a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-6 text-[15px] font-medium text-white">
+
+                    <a href="#" class="hover:text-teal-600 transition">Home</a>
+
+                    <a href="#" class="hover:text-teal-600 transition">About Us</a>
+
+                    <!-- Products Dropdown -->
+                    <div class="relative group">
+                        <a href="#" class="hover:text-teal-600 transition flex items-center gap-1">
+                            Products
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+
+                        <div
+                            class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible 
+                        group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-200 text-sm">
+
+                            <a href="#" class="block px-4 py-2 hover:bg-slate-100 text-black hover:text-blue-800">
+                                Product-1
+                            </a>
+
+                            <a href="#" class="block px-4 py-2 hover:bg-slate-100 text-black hover:text-blue-800">
+                                Product-2
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- End Dropdown -->
+
+                    <a href="#" class="hover:text-teal-600 transition">Blog</a>
+
+                    <a href="#" class="hover:text-teal-600 transition">Career</a>
+
+                    <a href="#" class="hover:text-teal-600 transition">Contact Us</a>
+
+                </nav>
+
+                <!-- Mobile Toggle -->
+                <button onclick="openMenu()" class="lg:hidden rounded-md p-2 bg-transparen transition"
+                    aria-label="Open menu">
+                    <i class="ri-menu-3-line text-white text-3xl"></i>
+                </button>
+
+                <button
+                    class="group relative lg:inline-flex items-center justify-center px-8 py-3 font-semibold bg-gradient-to-r from-blue-500 to-blue-400 rounded-full text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 group-hover:opacity-100 transition-all duration-300 hidden"
+                    onclick="openApplyModal()">
+
+                    <span class="relative z-10">Enquiry Now</span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeMenu()"
+        class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    </div>
+
+
+    <!-- OFFCANVAS -->
+    <aside id="offcanvas"
+        class="fixed top-0 left-0 h-full w-80 bg-white/95 backdrop-blur-md shadow-2xl transform -translate-x-full transition-transform duration-300 z-[100] flex flex-col">
+
+        <!-- Offcanvas Header -->
+        <div class="py-2 border-b border-slate-100 px-4 flex items-center justify-between">
+            <img src="assets/images/logo/logo.png" class="h-8" alt="">
+            <button onclick="closeMenu()" class="text-3xl text-red-500">×</button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 pb-6 text-sm font-medium text-gray-800">
+
+            <ul class="flex flex-col divide-y divide-dotted divide-gray-300">
+
+                <li>
+                    <a href="#" class="block px-5 py-3 hover:text-[var(--secondary-color)]">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="block px-5 py-3 hover:text-[var(--secondary-color)]">
+                        About Us
+                    </a>
+                </li>
+
+                <!-- Products Dropdown -->
+                <li class="relative">
+
+                    <button class="w-full px-5 py-3 flex justify-between items-center dropdown-toggle">
+                        <span>Products</span>
+                        <i class="ri-arrow-down-s-line text-xl transition-transform duration-300"></i>
+                    </button>
+
+                    <ul class="submenu max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 pl-10 list-disc">
+
+                        <li>
+                            <a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">
+                                Product-1
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">
+                                Product-2
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="block px-5 py-3 hover:text-[var(--secondary-color)]">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="block px-5 py-3 hover:text-[var(--secondary-color)]">
+                        Career
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="block px-5 py-3 hover:text-[var(--secondary-color)]">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Footer -->
+        <div class="border-t px-6 py-4 text-xs border-slate-200 text-gray-500">
+            © 2026 Classic Mattress. All rights reserved.
+        </div>
+    </aside>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="bg-[url('assets/images/banner/banner-main.webp')] bg-cover bg-top h-screen pt-36">
+            <div class="max-w-7xl px-4 mx-auto">
+                <div class="relative z-10 flex items-center justify-center h-full px-4">
+
+                    <div class="text-center max-w-xl w-full">
+                        <h1 class="text-white text-4xl md:text-5xl font-bold !leading-[1.25] mb-6">
+                            Wake Up Refreshed. Every Single Morning.
+                        </h1>
+                        <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-xl mx-auto">
+                            Engineered for deeper sleep, perfect spinal support, and refreshed mornings every single
+                            day.
+                        </p>
+                        <button
+                            class="group relative inline-flex items-center justify-center px-8 py-3 font-semibold bg-gradient-to-r from-blue-500 to-blue-400 rounded-full text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 group-hover:opacity-100 hover:-translate-y-1 transition-all duration-300"
+                            onclick="openApplyModal()">
+
+                            <span class="relative z-10">Enquiry Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Section Title -->
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                        Explore Our Mattress Collections
+                    </h2>
+                    <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+                        Designed to suit every sleep style and comfort preference.
+                    </p>
+                </div>
+
+                <!-- Categories Grid -->
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-1.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Orthopedic Mattress</h3>
+                            <p class="text-sm opacity-90">Advanced spinal support technology</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-2.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Memory Foam</h3>
+                            <p class="text-sm opacity-90">Body contouring comfort</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-3.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Luxury Collection</h3>
+                            <p class="text-sm opacity-90">Hotel-grade premium experience</p>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-4.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Pocket Spring</h3>
+                            <p class="text-sm opacity-90">Enhanced airflow with responsive support</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-5.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Kids Mattress</h3>
+                            <p class="text-sm opacity-90">Safe, breathable comfort for growing bodies</p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div
+                        class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                        <img src="assets/images/category/cat-6.webp"
+                            class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/30 transition"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-xl font-semibold mb-1">Budget Comfort</h3>
+                            <p class="text-sm opacity-90">Affordable quality without compromise</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="py-20 bg-[#fffcf7]">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">
+                        Our Featured Mattresses
+                    </h2>
+                    <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+                        Thoughtfully engineered for superior comfort, support, and lasting durability.
+                    </p>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid md:grid-cols-3 gap-x-8 gap-y-16">
+                    <div class="group">
+
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/category/cat-1.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Cloud Comfort
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Adaptive memory foam with breathable layers for balanced support.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                    <div class="group">
+
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/products/pro-2.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Ortho Support
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Multi-zone construction designed for optimal spinal alignment.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                    <div class="group">
+
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/products/pro-3.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Luxury Collection
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Premium pocket spring technology for hotel-grade comfort.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                    <div class="group">
+
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/products/pro-4.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Cool Breeze Hybrid
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Advanced cooling gel layers combined with responsive springs for temperature-controlled
+                            comfort.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                    <div class="group">
+
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/products/pro-5.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Spine Care Elite
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Engineered with multi-zone orthopedic support to promote healthy spinal alignment.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+                    <div class="group">
+                        <div class="overflow-hidden rounded-2xl mb-6">
+                            <img src="assets/images/products/pro-6.webp"
+                                class="w-full h-72 object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Royal Plush Signature
+                        </h3>
+
+                        <p class="text-gray-500 leading-relaxed mb-4">
+                            Ultra-soft comfort layers with premium fabric finishing for a luxury hotel-like sleep
+                            experience.
+                        </p>
+
+                        <a href="#"
+                            class="text-gray-900 font-medium border-b border-gray-900 pb-1 hover:opacity-70 transition">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-16">
+                    <a href="#"
+                        class="bg-[#0a2035] text-white px-8 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
+                        View All Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why choose us -->
+        <section class="relative py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid lg:grid-cols-2 gap-24">
+
+                    <!-- LEFT CONTENT -->
+                    <div>
+                        <h2 class="mt-6 text-4xl md:text-5xl !leading-[1.2] font-semibold text-gray-900">
+                            Sleep Better With
+                            <span class="text-red-600">Precision Engineering</span>
+                        </h2>
+
+                        <p class="mt-6 text-gray-500 text-lg leading-relaxed max-w-xl">
+                            Our mattresses are thoughtfully engineered using advanced support systems,
+                            high-density foam layers, and breathable comfort fabrics to deliver consistent
+                            spinal alignment and pressure relief throughout the night.
+                        </p>
+
+                        <p class="mt-4 text-gray-500 text-lg leading-relaxed max-w-xl">
+                            With precision craftsmanship and durable construction, each design is built
+                            to maintain its structure and comfort over time — ensuring healthier sleep,
+                            long-term reliability, and refreshing mornings every day.
+                        </p>
+                    </div>
+
+                    <!-- RIGHT FEATURES -->
+                    <div class="grid sm:grid-cols-2 gap-8">
+
+                        <!-- Feature Card -->
+                        <div
+                            class="group p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-200">
+
+                            <i class="ri-hotel-bed-line text-4xl font-normal inline-block text-red-500 mb-2"></i>
+
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                Advanced Support System
+                            </h3>
+
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Multi-layer construction designed for optimal spinal alignment and pressure relief.
+                            </p>
+                        </div>
+
+                        <!-- Feature Card -->
+                        <div
+                            class="group p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-200">
+
+                            <i class="ri-leaf-line text-4xl font-normal inline-block text-red-500 mb-2"></i>
+
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                Premium Materials
+                            </h3>
+
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Crafted using breathable fabrics and high-density foam for durability.
+                            </p>
+                        </div>
+
+                        <!-- Feature Card -->
+                        <div
+                            class="group p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-200">
+
+                            <i class="ri-shield-check-line text-4xl font-normal inline-block text-red-500 mb-2"></i>
+
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                10-Year Warranty
+                            </h3>
+
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Industry-leading warranty coverage for long-term peace of mind.
+                            </p>
+                        </div>
+
+                        <!-- Feature Card -->
+                        <div
+                            class="group p-8 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-gray-200">
+
+                            <i class="ri-truck-line text-4xl font-normal inline-block text-red-500 mb-2"></i>
+
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                Free & Fast Delivery
+                            </h3>
+
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Safe doorstep delivery across all major service locations.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- STATS SECTION -->
+                <div class="mt-10 grid md:grid-cols-3 gap-16 text-center border-t pt-8">
+
+                    <div>
+                        <h3 class="text-5xl font-semibold text-gray-900">10+</h3>
+                        <p class="text-gray-500 mt-3 tracking-wide text-sm">
+                            Years of Innovation
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-5xl font-semibold text-gray-900">50K+</h3>
+                        <p class="text-gray-500 mt-3 tracking-wide text-sm">
+                            Happy Customers
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-5xl font-semibold text-gray-900">4.8/5</h3>
+                        <p class="text-gray-500 mt-3 tracking-wide text-sm">
+                            Customer Rating
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section class="mb-16 md:mb-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-[#0a2035] rounded-2xl md:rounded-3xl px-6 sm:px-10 md:px-12 py-10 sm:py-14 shadow-xl">
+
+                    <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                        <!-- LEFT CONTENT -->
+                        <div class="text-center md:text-left">
+
+                            <!-- Top Label -->
+                            <p class="text-xs sm:text-sm uppercase tracking-widest text-white/60 mb-4 sm:mb-6">
+                                Premium Sleep Collection
+                            </p>
+
+                            <!-- Heading -->
+                            <h2
+                                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
+                                Experience Deep,
+                                <br class="hidden md:block" />
+                                Restful Sleep
+                            </h2>
+
+                            <!-- Subtext -->
+                            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-white/70 max-w-xl mx-auto md:mx-0">
+                                Crafted with advanced support technology and luxury comfort layers
+                                to give you the perfect balance of softness and support.
+                            </p>
+
+                            <!-- Buttons -->
+                            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center md:items-start gap-4">
+
+                                <a href="#"
+                                    class="w-full sm:w-auto text-center bg-white text-[#0B1C2D] px-7 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
+                                    Shop Mattresses
+                                </a>
+
+                                <a href="#"
+                                    class="w-full sm:w-auto text-center border border-white/30 text-white px-7 py-3 rounded-full font-medium hover:bg-white/10 transition duration-300">
+                                    View Collection
+                                </a>
+
+                            </div>
+
+                            <!-- Trust Line -->
+                            <div
+                                class="mt-6 sm:mt-8 flex flex-wrap items-center md:justify-start justify-center gap-3 text-xs sm:text-sm text-white/60">
+                                <span>100 Night Free Trial</span>
+                                <span class="hidden sm:inline">•</span>
+                                <span>Free Delivery</span>
+                                <span class="hidden sm:inline">•</span>
+                                <span>10 Year Warranty</span>
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT IMAGE -->
+                        <div class="relative order-first md:order-last">
+                            <img src="assets/images/cta/cta.webp" alt="Premium Mattress"
+                                class="rounded-xl md:rounded-2xl shadow-2xl w-full h-64 sm:h-80 md:h-full object-cover">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <p class="text-sm uppercase tracking-widest text-[#0B1C2D]/60 mb-4">
+                        Customer Stories
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-[#0B1C2D]">
+                        Loved by Thousands of Happy Sleepers
+                    </h2>
+                    <p class="mt-4 text-gray-600">
+                        Real experiences from customers who transformed their sleep quality.
+                    </p>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Within just a week, I noticed a huge improvement in my sleep quality.
+                            The mattress perfectly balances softness and firm support, especially
+                            for side sleeping. I now wake up refreshed without the back discomfort
+                            I used to feel every morning.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Rohan Desai</p>
+                            <p class="text-xs text-gray-500 mt-1">Pune</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            The build quality is outstanding. From the stitching to the edge support,
+                            everything feels premium and durable. Even after months of use, it still
+                            maintains its original shape and comfort like day one.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Priya Nair</p>
+                            <p class="text-xs text-gray-500 mt-1">Kochi</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            I struggled with lower back stiffness for years. After switching,
+                            the firmness level feels just right — supportive yet comfortable.
+                            Mornings are now pain-free and I feel more energetic throughout the day.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Sandeep Verma</p>
+                            <p class="text-xs text-gray-500 mt-1">Jaipur</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Delivery was surprisingly quick and the packaging felt premium.
+                            The mattress expanded perfectly within hours and setup was effortless.
+                            The entire buying experience felt smooth and professional.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Meera Joshi</p>
+                            <p class="text-xs text-gray-500 mt-1">Ahmedabad</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            It genuinely feels like sleeping in a luxury hotel every night.
+                            The comfort layers gently hug the body without sinking too much.
+                            I actually look forward to bedtime now — best investment for my home.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Amit Khanna</p>
+                            <p class="text-xs text-gray-500 mt-1">Chandigarh</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="bg-white rounded-3xl p-8 border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-400">★★★★★</div>
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Verified</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            I was hesitant about buying a mattress online, but this exceeded
+                            my expectations completely. The 100-night trial gave me confidence,
+                            and the comfort is unmatched. My entire family loves it.
+                        </p>
+                        <div class="mt-6">
+                            <p class="font-semibold text-[#0B1C2D]">Neha Kapoor</p>
+                            <p class="text-xs text-gray-500 mt-1">Delhi</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Section Heading -->
+                <div class="text-center mb-14">
+                    <p class="text-sm uppercase tracking-widest text-[#0a2035]/60 mb-4">
+                        Sleep Insights
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-[#0a2035]">
+                        Latest From Our Blog
+                    </h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        Expert advice, sleep tips, and mattress care guides to help you
+                        enjoy deeper, healthier, and more restful sleep every night.
+                    </p>
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Blog Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="assets/images/category/cat-1.webp" alt="Blog Image"
+                                class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-[#0a2035]/60">Sleep Tips • 5 min read</span>
+                            <h3 class="mt-3 text-xl font-semibold text-[#0a2035]">
+                                How to Choose the Perfect Mattress for Your Sleep Style
+                            </h3>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Discover how firmness, materials, and support systems
+                                impact your sleep quality and comfort.
+                            </p>
+                            <a href="#" class="inline-block mt-4 text-[#0a2035] font-medium hover:underline">
+                                Read More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="assets/images/category/cat-5.webp" alt="Blog Image"
+                                class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-[#0a2035]/60">Wellness • 4 min read</span>
+                            <h3 class="mt-3 text-xl font-semibold text-[#0a2035]">
+                                7 Habits That Improve Deep Sleep Naturally
+                            </h3>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Improve your nightly rest with simple lifestyle
+                                changes backed by sleep science.
+                            </p>
+                            <a href="#" class="inline-block mt-4 text-[#0a2035] font-medium hover:underline">
+                                Read More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="assets/images/category/cat-4.webp" alt="Blog Image"
+                                class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-[#0a2035]/60">Care Guide • 3 min read</span>
+                            <h3 class="mt-3 text-xl font-semibold text-[#0a2035]">
+                                How Often Should You Replace Your Mattress?
+                            </h3>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                Learn the signs that indicate it’s time to upgrade
+                                your mattress for better support and hygiene.
+                            </p>
+                            <a href="#" class="inline-block mt-4 text-[#0a2035] font-medium hover:underline">
+                                Read More →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-14">
+                    <a href="#"
+                        class="bg-[#0a2035] text-white px-8 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
+                        View All Articles
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0B1C2D] text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="bg-white/5 backdrop-blur rounded-3xl p-10 mb-16 border border-white/10">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                    <!-- Left Content -->
+                    <div>
+                        <h3 class="text-3xl font-semibold leading-tight text-white">
+                            Get Exclusive Sleep Offers
+                        </h3>
+                        <p class="text-white/70 mt-3">
+                            Enter your phone number to receive special discounts and updates.
+                        </p>
+                    </div>
+
+                    <!-- Phone Input -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+
+                        <!-- Country Code + Input Wrapper -->
+                        <div
+                            class="flex items-center w-full bg-white/10 border border-white/20 rounded-full px-4 py-3 focus-within:ring-2 focus-within:ring-white/30 transition">
+
+                            <span class="text-white/70 text-sm mr-3">
+                                +91
+                            </span>
+
+                            <input type="tel" placeholder="Enter your mobile number"
+                                class="w-full bg-transparent text-white placeholder-white/50 focus:outline-none text-sm" />
+                        </div>
+
+                        <!-- Button -->
+                        <button
+                            class="px-6 py-3 whitespace-nowrap rounded-full bg-white text-[#0B1C2D] font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
+                            Submit
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Main Footer Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+
+                <!-- Brand -->
+                <div>
+                    <div class="py-2 px-3 bg-white rounded-xl inline-block mb-4">
+                        <img src="assets/images/logo/logo.png" class="h-12" alt="Brand Logo">
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed">
+                        Premium mattresses crafted with advanced comfort technology
+                        to transform the way you sleep.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="font-semibold mb-5 text-white">Quick Links</h5>
+                    <ul class="space-y-3 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Products</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Categories -->
+                <div>
+                    <h5 class="font-semibold mb-5 text-white">Top Categories</h5>
+                    <ul class="space-y-3 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Memory Foam Mattress</a></li>
+                        <li><a href="#" class="hover:text-white transition">Orthopedic Mattress</a></li>
+                        <li><a href="#" class="hover:text-white transition">Latex Mattress</a></li>
+                        <li><a href="#" class="hover:text-white transition">Premium Pillows</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h5 class="font-semibold mb-5 text-white">Policies</h5>
+                    <ul class="space-y-3 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-white transition">Refund Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Shipping Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h5 class="font-semibold mb-5 text-white">Contact Us</h5>
+                    <ul class="space-y-4 text-white/60 text-sm">
+
+                        <li class="flex items-start gap-3">
+                            <i class="ri-phone-line"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="ri-mail-line"></i>
+                            <span>support@sleepnest.com</span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <i class="ri-time-line"></i>
+                            <span>Mon – Sat: 10AM – 7PM</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Trust Row -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-center sm:justify-between border-t border-white/10 pt-8 text-sm text-white/50 gap-4">
+                <p>© 2026 Classic Mattress. All rights reserved.</p>
+
+                <div class="sm:flex hidden items-center gap-6">
+                    <span>Secure Payments</span>
+                    <span>•</span>
+                    <span>Free Delivery</span>
+                    <span>•</span>
+                    <span>10 Year Warranty</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Backdrop -->
+    <div id="applyBackdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity"
+        onclick="closeApplyModal()"></div>
+
+    <!-- Modal -->
+    <div id="applyModal" class="fixed inset-0 z-50 hidden items-center justify-center px-4">
+        <div class="relative sm:w-[75%] w-[95%] md:max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden
+          transform scale-95 opacity-0 transition-all duration-300
+          grid grid-cols-1 md:grid-cols-2">
+
+            <!-- Left Image -->
+            <div class="hidden md:block bg-[#0B1C2D]">
+                <img src="assets/images/contact/modal.webp" alt="Mattress Enquiry"
+                    class="h-full w-full object-cover aspect-square">
+            </div>
+
+            <!-- Right Form -->
+            <div class="p-6 sm:p-8 relative">
+
+                <!-- Close Button -->
+                <button onclick="closeApplyModal()"
+                    class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
+                    <i class="ri-close-line text-red-500 text-2xl"></i>
+                </button>
+
+                <h3 class="text-lg font-semibold text-gray-900">
+                    Mattress Enquiry
+                </h3>
+                <p class="mt-0.5 text-xs sm:text-sm text-gray-600">
+                    Get personalized assistance for choosing the perfect mattress.
+                </p>
+
+                <form class="mt-6 space-y-5">
+
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Full Name
+                        </label>
+                        <input type="text" required class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-1 focus:ring-[#0B1C2D]">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Phone Number
+                        </label>
+                        <input type="tel" required class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-1 focus:ring-[#0B1C2D]">
+                    </div>
+
+                    <!-- Mattress Type -->
+                    <div class="flex flex-col">
+                        <label for="product" class="text-sm font-medium mb-2">
+                            Select Mattress
+                        </label>
+
+                        <div class="relative">
+                            <select id="product" name="product" required class="w-full appearance-none rounded-lg border border-gray-300
+                            px-4 py-3 pr-10 text-sm bg-white
+                            focus:outline-none focus:ring-1 focus:ring-[#0B1C2D]">
+
+                                <option value="">Choose Mattress</option>
+                                <option>Cloud Comfort</option>
+                                <option>Ortho Support</option>
+                                <option>Luxury Collection</option>
+                                <option>Hybrid Cooling Mattress</option>
+                            </select>
+
+                            <i class="ri-arrow-down-s-line absolute right-3 top-1/2 -translate-y-1/2
+                            text-gray-500 pointer-events-none text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Mattress Size -->
+                    <div class="flex flex-col">
+                        <label for="size" class="text-sm font-medium mb-2">
+                            Mattress Size
+                        </label>
+
+                        <div class="relative">
+                            <select id="size" name="size" class="w-full appearance-none rounded-lg border border-gray-300
+                            px-4 py-3 pr-10 text-sm bg-white
+                            focus:outline-none focus:ring-1 focus:ring-[#0B1C2D]">
+
+                                <option value="">Select Size</option>
+                                <option>Single</option>
+                                <option>Double</option>
+                                <option>Queen</option>
+                                <option>King</option>
+                            </select>
+
+                            <i class="ri-arrow-down-s-line absolute right-3 top-1/2 -translate-y-1/2
+                            text-gray-500 pointer-events-none text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Additional Message (Optional)
+                        </label>
+                        <textarea rows="3" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-1 resize-none focus:ring-[#0B1C2D]"
+                            placeholder="Any specific requirements?"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-full rounded-lg bg-[#0B1C2D] px-5 py-3 text-white text-sm font-semibold
+                    hover:bg-black transition">
+                        Request Callback
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            infinite: false
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+
+</body>
+
+</html>
